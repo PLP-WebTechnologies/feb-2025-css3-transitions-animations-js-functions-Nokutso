@@ -1,0 +1,120 @@
+/* THE FONTS THAT ARE USED */
+@font-face {
+    font-family: 'Luckiest_Guy';
+    src: url('fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+}
+
+/* THE HTML AND BODY */
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: Luckiest_Guy;
+    font-size: 3rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    height: 200vh;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body.light {
+    background-color: white;
+    color: black;
+}
+
+body.dark {
+    background-color: #121212;
+    color: white;
+}
+
+body.blue {
+    background-color: #001f3f;
+    color: #A3C3D9;
+}
+
+body.green {
+    background-color: #3A4E48;
+    color: #8B9D83;
+}
+
+body.purple {
+    background-color: #993955;
+    color: white;
+}
+
+/* THE ENTIRETY OF THE CONTENT EXCEPT THE BOX */
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect center */
+    width: 100%;
+    text-align: center;
+    z-index: 2; /* Stay above the .box */
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* THE BUTTON */
+button {
+    padding: 10px 20px;
+    font-family: Raleway;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(2.1) rotate(2deg);
+}
+
+/*THE INPUT*/
+input[type="text"] {
+    padding: 10px;
+    font-family: Raleway;
+    font-size: 16px;
+    margin: 10px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+}
+
+/* THE BOX */
+.box{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 100px auto;
+    z-index: -1;
+  }
+
+
+.box1, .box2{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin: 100px auto;
+    z-index: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    button:hover {
+        transform: scale(1.1) rotate(2deg);
+    }
+}
